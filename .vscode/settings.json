@@ -15,7 +15,7 @@
     // "--log-level=DEBUG" // Enable to get more info from CMake.
   ],
   "cmake.configureSettings": {
-    "SketchUpAPI_SEARCH_DIR": "${workspaceRoot}/../../SLAPI",
+    "SketchUpAPI_SEARCH_DIR": "/SketchUpSDK",
     // Below config is used to provide explicit paths to the C API library
     // and bundle loader.
     // For instance, if the project target lowest SketchUp version is 2020 and

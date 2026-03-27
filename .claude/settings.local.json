@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Program Files/SketchUp/**)",
+      "Bash(C:/Ruby32-x64/bin/ridk.cmd exec:*)",
+      "Bash(ls \"C:/Users/boris/Documents/GitHub/BES-PlugIns/BES-DemTools/bes_camera/\"*.so)",
+      "Bash(ls \"C:/Users/boris/Documents/GitHub/BES-PlugIns/BES-DemTools/bes_camera/\"*.dll)",
+      "Bash(echo \"Exit: $?\")"
+    ]
+  }
+}

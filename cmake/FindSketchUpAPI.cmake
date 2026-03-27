@@ -226,13 +226,22 @@ message(DEBUG "SketchUpAPI_INCLUDE_DIR: ${SketchUpAPI_INCLUDE_DIR}")
 message(DEBUG "SketchUpAPI_COMMON_PREFERENCES_LIBRARY: ${SketchUpAPI_COMMON_PREFERENCES_LIBRARY}")
 
 include(FindPackageHandleStandardArgs)
-find_package_handle_standard_args(SketchUpAPI
-  REQUIRED_VARS
-    SketchUpAPI_LIBRARY
-    SketchUpAPI_LIVE_LIBRARY
-    SketchUpAPI_INCLUDE_DIR
-  VERSION_VAR
-    SketchUpAPI_VERSION)
+if(WIN32)
+  find_package_handle_standard_args(SketchUpAPI
+    REQUIRED_VARS
+      SketchUpAPI_LIVE_LIBRARY
+      SketchUpAPI_INCLUDE_DIR
+    VERSION_VAR
+      SketchUpAPI_VERSION)
+else()
+  find_package_handle_standard_args(SketchUpAPI
+    REQUIRED_VARS
+      SketchUpAPI_LIBRARY
+      SketchUpAPI_LIVE_LIBRARY
+      SketchUpAPI_INCLUDE_DIR
+    VERSION_VAR
+      SketchUpAPI_VERSION)
+endif()
 
 if(SketchUpAPI_FOUND)
   set(SketchUpAPI_LIBRARIES ${SketchUpAPI_LIBRARY} ${SketchUpAPI_COMMON_PREFERENCES_LIBRARY})
